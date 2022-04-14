@@ -29,7 +29,7 @@ export default function Hero() {
 									</h1>
 									<p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
 										Développement de solution sur blockchain compatible EVM ou réalisation de
-										front-end n&amp;hésitez pas à prendre contact.
+										front-end n&apos;hésitez pas à prendre contact.
 									</p>
 									<div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
 										<div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
@@ -45,7 +45,7 @@ export default function Hero() {
 												href="#"
 												className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
 											>
-												Mes realisations
+												Mes réalisations
 											</a>
 										</div>
 									</div>
