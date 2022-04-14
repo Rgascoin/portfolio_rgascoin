@@ -9,6 +9,10 @@ const mapping = [
 		link: '/',
 	},
 	{
+		name: 'Projets',
+		link: '/projets',
+	},
+	{
 		name: 'Contact',
 		link: '/contact',
 	},
