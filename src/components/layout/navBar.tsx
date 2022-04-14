@@ -45,9 +45,11 @@ export default function NavBar(pageName: any) {
 								</Disclosure.Button>
 							</div>
 							<div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-								<div className="flex-shrink-0 flex items-center">
-									<h1 className={'-pr-12'}>RGASCOIN.FR</h1>
-								</div>
+								<Link href={'/'}>
+									<div className="flex-shrink-0 flex items-center">
+										<h1 className={'-pr-12'}>RGASCOIN.FR</h1>
+									</div>
+								</Link>
 								<div className="hidden sm:ml-6 sm:flex sm:space-x-8">
 									{/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
 									{mapping &&
