@@ -1,8 +1,8 @@
 import { NextPage } from 'next';
-import ReactMarkdown from 'react-markdown';
 import { NotionRenderer } from 'react-notion-x';
 import Head from 'next/head';
-import { getPost, postsList } from '../../../lib/notion';
+import { getPost } from '../../../lib/notion';
+import dynamic from 'next/dynamic';
 
 import NavBar from '../../components/layout/navBar';
 import Footer from '../../components/layout/footer';
@@ -13,6 +13,8 @@ interface Props {
 }
 
 const Post: NextPage<Props> = (props: any) => {
+	const Code = dynamic(() => import('react-notion-x/build/third-party/code').then((m: any) => m.Code));
+
 	return (
 		<>
 			<Head>
@@ -23,6 +25,9 @@ const Post: NextPage<Props> = (props: any) => {
 			<NavBar />
 			<NotionRenderer
 				recordMap={props.page}
+				components={{
+					Code,
+				}}
 				fullPage={true}
 				darkMode={false}
 				disableHeader={true}

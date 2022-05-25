@@ -40,7 +40,7 @@ export default function Features() {
 							<blockquote>
 								<div>
 									<p className="text-base text-gray-500">
-										&ldquo;Travailler avec Roman est un plaisir. Toujours courtois et professionnel;
+										&ldquo;Travailler avec Roman est un plaisir. Toujours courtois et professionnel,
 										il nous tient régulièrement au courant de ses avancés sur notre projet.&rdquo;
 									</p>
 								</div>
@@ -49,7 +49,7 @@ export default function Features() {
 										<div className="flex-shrink-0">
 											<img
 												className="h-6 w-6 rounded-full"
-												src="https://pbs.twimg.com/profile_images/1511003519477850115/_MxF6kbi_400x400.png"
+												src="https://lh3.googleusercontent.com/V3UoPZaHEccDORF8gxF2vgAfwHxWxldyLfNgidPF5twZ-73ZyRbAZJ1ZmYYAVf8ime9_-GgV8aD-9ydZ42U0u1lP2MD-_jh8wJ3diLE=w335"
 												alt=""
 											/>
 										</div>
