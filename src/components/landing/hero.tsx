@@ -6,7 +6,7 @@ function classNames(...classes: any) {
 
 export default function Hero() {
 	return (
-		<div className="bg-white">
+		<div className="bg-white mt-4">
 			<main>
 				<div>
 					{/* Hero card */}

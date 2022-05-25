@@ -18,17 +18,10 @@ const mapping = [
 	},
 ];
 
-function classNames(...classes: any) {
-	return classes.filter(Boolean).join(' ');
-}
-
-export default function NavBar(pageName: any) {
+export default function NavBar() {
 	const router = useRouter();
-
-	console.log(router.pathname);
-
 	return (
-		<Disclosure as="nav" className="bg-grey-200 shadow mb-4">
+		<Disclosure as="nav" className="bg-grey-200 shadow">
 			{({ open }) => (
 				<>
 					<div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -54,7 +47,12 @@ export default function NavBar(pageName: any) {
 									{/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
 									{mapping &&
 										mapping.map((el) => {
-											if (el.link === router.pathname) {
+											if (
+												router.pathname
+													.toLocaleLowerCase()
+													.includes(el.name.toLocaleLowerCase()) ||
+												router.pathname === el.link
+											) {
 												return (
 													<Link href={el.link} key={el.name}>
 														<a className="border-indigo-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
@@ -81,7 +79,10 @@ export default function NavBar(pageName: any) {
 							{/* Current: "bg-indigo-50 border-indigo-500 text-indigo-700", Default: "border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700" */}
 							{mapping &&
 								mapping.map((el) => {
-									if (el.link === router.pathname) {
+									if (
+										router.pathname.toLocaleLowerCase().includes(el.name.toLocaleLowerCase()) ||
+										router.pathname === el.link
+									) {
 										return (
 											<Link href={el.link} key={el.name}>
 												<Disclosure.Button
