@@ -2,7 +2,10 @@ import { NextPage } from 'next';
 import { NotionRenderer } from 'react-notion-x';
 import Head from 'next/head';
 import { getPost } from '../../../lib/notion';
+
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import Link from 'next/link';
 
 import NavBar from '../../components/layout/navBar';
 import Footer from '../../components/layout/footer';
@@ -27,6 +30,8 @@ const Post: NextPage<Props> = (props: any) => {
 				recordMap={props.page}
 				components={{
 					Code,
+					nextImage: Image,
+					nextLink: Link,
 				}}
 				fullPage={true}
 				darkMode={false}
