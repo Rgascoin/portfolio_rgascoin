@@ -64,8 +64,8 @@ export default function Features() {
 					<div className="mt-12 sm:mt-16 lg:mt-0">
 						<div className="pl-4 lg:px-0 lg:m-0 lg:relative lg:h-full">
 							<img
-								className="w-full rounded-xl shadow-md lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-								src="nftDesign.gif"
+								className="w-full rounded-xl lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+								src="https://lh3.googleusercontent.com/OEX34MvGkDcbuxbwdSg1_Bhc2XiODdzIrE60ujWw5bHwQyrTesKol6-sLCzRji43rrGeSW4ua1yUexPT4AizoXnN3njOC2jfpgqLOg=w600"
 								alt="Inbox user interface"
 							/>
 						</div>
