@@ -27,7 +27,7 @@ const navigation = [
 		href: 'https://github.com/Rgascoin',
 		icon: (props: any) => (
 			<img
-				className="h-6 grayscale  hover:grayscale-0 transition delay-100"
+				className="h-6 grayscale  hover:grayscale-0 invert transition delay-100"
 				src="https://cdn.svgporn.com/logos/github-icon.svg"
 				alt="Mirage"
 			/>
@@ -37,7 +37,7 @@ const navigation = [
 
 export default function Footer() {
 	return (
-		<footer className="bg-gray-100">
+		<footer className="bg-gray-900">
 			<div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
 				<div className="flex justify-center space-x-6 md:order-2">
 					{navigation.map((item) => (

@@ -6,12 +6,12 @@ function classNames(...classes: any) {
 
 export default function Hero() {
 	return (
-		<div className="bg-white mt-4">
+		<div className="bg-gray-900 mt-4">
 			<main>
 				<div>
 					{/* Hero card */}
 					<div className="relative">
-						<div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
+						<div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-800" />
 						<div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
 							<div className="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
 								<div className="absolute inset-0">
@@ -57,7 +57,7 @@ export default function Hero() {
 					</div>
 
 					{/* Logo cloud */}
-					<div className="bg-gray-100">
+					<div className="bg-gray-800">
 						<div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
 							<p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
 								Mes technologies favorites du moment
@@ -65,35 +65,35 @@ export default function Hero() {
 							<div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
 								<div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
 									<img
-										className="h-12 grayscale  hover:grayscale-0 transition delay-100 transition delay-100"
+										className="h-12  hover:brightness-100 transition invert delay-100 transition delay-100"
 										src="https://cdn.svgporn.com/logos/solidity.svg"
 										alt="Tuple"
 									/>
 								</div>
 								<div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
 									<img
-										className="h-12 grayscale  hover:grayscale-0 transition delay-100"
+										className="h-12  hover:brightness-100 transition delay-100"
 										src="https://cdn.svgporn.com/logos/typescript-icon.svg"
 										alt="Mirage"
 									/>
 								</div>
 								<div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
 									<img
-										className="h-12 grayscale  hover:grayscale-0 transition delay-100"
+										className="h-12  hover:brightness-100 transition delay-100"
 										src="https://cdn.svgporn.com/logos/python.svg"
 										alt="StaticKit"
 									/>
 								</div>
 								<div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
 									<img
-										className="h-12 grayscale  hover:grayscale-0 transition delay-100"
+										className="h-12  hover:brightness-100 transition invert delay-100"
 										src="https://cdn.svgporn.com/logos/nextjs-icon.svg"
 										alt="Transistor"
 									/>
 								</div>
 								<div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
 									<img
-										className="h-12 grayscale hover:grayscale-0 transition delay-100"
+										className="h-12  hover:brightness-100 transition delay-100"
 										src="https://cdn.svgporn.com/logos/hardhat-icon.svg"
 										alt="Workcation"
 									/>

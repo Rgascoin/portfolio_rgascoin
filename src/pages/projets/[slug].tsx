@@ -34,7 +34,7 @@ const Post: NextPage<Props> = (props: any) => {
 					nextLink: Link,
 				}}
 				fullPage={true}
-				darkMode={false}
+				darkMode={true}
 				disableHeader={true}
 				hideBlockId={true}
 			/>

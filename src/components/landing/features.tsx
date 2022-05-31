@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Features() {
 	return (
-		<div className="relative bg-white pt-16 pb-32 overflow-hidden">
+		<div className="relative bg-gray-900 pt-16 pb-32 overflow-hidden">
 			<div className="relative">
 				<div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">
 					<div className="px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0">
@@ -16,10 +16,10 @@ export default function Features() {
 								/>
 							</div>
 							<div className="mt-6">
-								<h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+								<h2 className="text-3xl font-extrabold tracking-tight text-white">
 									Vos solutions NFT clés en main
 								</h2>
-								<p className="mt-4 text-lg text-gray-500">
+								<p className="mt-4 text-lg text-gray-200">
 									Vous souhaitez réaliser un projet NFT ? Que ce soit pour de l&apos;audit ou réalisé
 									votre demande n&apos;hésitez plus et prenez contact pour discuter de votre projet
 									maintenant
@@ -39,7 +39,7 @@ export default function Features() {
 						<div className="mt-8 border-t border-gray-200 pt-6">
 							<blockquote>
 								<div>
-									<p className="text-base text-gray-500">
+									<p className="text-base text-gray-300">
 										&ldquo;Travailler avec Roman est un plaisir. Toujours courtois et professionnel,
 										il nous tient régulièrement au courant de ses avancés sur notre projet.&rdquo;
 									</p>
@@ -53,7 +53,7 @@ export default function Features() {
 												alt=""
 											/>
 										</div>
-										<div className="text-base font-medium text-gray-700">
+										<div className="text-base font-medium text-gray-400">
 											Madeiro, Business manager at Kazoku
 										</div>
 									</div>
@@ -84,10 +84,10 @@ export default function Features() {
 								/>
 							</div>
 							<div className="mt-6">
-								<h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+								<h2 className="text-3xl font-extrabold tracking-tight text-white">
 									Des front-end réalisés sur mesure
 								</h2>
-								<p className="mt-4 text-lg text-gray-500">
+								<p className="mt-4 text-lg text-gray-200">
 									Envie de mettre en avant votre business ? Je peux vous proposer des solutions
 									techniques et pratique selon vos besoins.
 								</p>
