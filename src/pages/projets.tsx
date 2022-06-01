@@ -15,6 +15,9 @@ const ContactPage: NextPage<Props> = (props: any) => {
 	const pickTagColor = (type: string) => {
 		const mapping = {
 			Article: 'bg-indigo-600',
+			Freelance: 'bg-orange-500',
+			Association: 'bg-teal-500',
+			Decouverte: 'bg-blue-500',
 			Tuto: 'bg-green-600',
 		};
 
@@ -62,7 +65,7 @@ const ContactPage: NextPage<Props> = (props: any) => {
 													{result.properties.Tags &&
 														result.properties.Tags.multi_select.map((el: any) => {
 															let color = pickTagColor(el.name);
-															if (!color) color = 'bg-gray-400';
+															if (!color) color = 'bg-gray-800';
 															return (
 																<p
 																	key={el.name}
