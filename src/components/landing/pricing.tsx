@@ -64,11 +64,11 @@ export default function Pricing() {
 							<div className="py-8 px-6 text-center bg-gray-700 lg:flex-shrink-0 lg:flex lg:flex-col lg:justify-center lg:p-12">
 								<p className="text-lg leading-6 font-medium text-white">mon TJM</p>
 								<div className="mt-4 flex items-center justify-center text-5xl font-extrabold text-white">
-									<span>750€</span>
+									<span>400€</span>
 									<span className="ml-3 text-xl font-medium text-gray-200">• Solidity</span>
 								</div>
 								<div className="mt-4 flex items-center justify-center text-5xl font-extrabold text-white">
-									<span>450€</span>
+									<span>300€</span>
 									<span className="ml-3 text-xl font-medium text-gray-200">• Dev. web</span>
 								</div>
 								<p className="mt-4 text-sm">
