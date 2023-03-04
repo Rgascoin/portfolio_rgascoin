@@ -3,8 +3,7 @@ const navigation = [
 	{
 		name: 'LinkedIn',
 		href: 'https://www.linkedin.com/in/rgascoin',
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-		icon: (props: JSX.Element) => (
+		icon: (props: any) => (
 			<img
 				className="h-6 grayscale  hover:grayscale-0 transition delay-100"
 				src="https://cdn.svgporn.com/logos/linkedin-icon.svg"
@@ -15,8 +14,7 @@ const navigation = [
 	{
 		name: 'Malt',
 		href: 'https://www.malt.fr/profile/romangascoin',
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-		icon: (props: JSX.Element) => (
+		icon: (props: any) => (
 			<img
 				className="h-6 grayscale  hover:grayscale-0 transition delay-100"
 				src="https://medias.carrieres-juridiques.com/image/employeurs/logos/5b50a49dbaedf.png"
@@ -27,8 +25,7 @@ const navigation = [
 	{
 		name: 'GitHub',
 		href: 'https://github.com/Rgascoin',
-		// eslint-disable-next-line @typescript-eslint/no-unused-vars
-		icon: (props: JSX.Element) => (
+		icon: (props: any) => (
 			<img
 				className="h-6 grayscale  hover:grayscale-0 invert transition delay-100"
 				src="https://cdn.svgporn.com/logos/github-icon.svg"

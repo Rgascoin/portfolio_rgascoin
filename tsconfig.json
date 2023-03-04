@@ -28,5 +28,8 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "paths": {
+    "@vercel/analytics/react": ["./node_modules/@vercel/analytics/dist/react"]
+  }
 }
