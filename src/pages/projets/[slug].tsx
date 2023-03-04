@@ -1,7 +1,7 @@
 import { NextPage } from 'next';
 import { NotionRenderer } from 'react-notion-x';
 import Head from 'next/head';
-import { getPost } from '../../../lib/notion';
+import { getPost, postsList } from '../../../lib/notion';
 
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
@@ -43,11 +43,19 @@ const Post: NextPage<Props> = (props: any) => {
 	);
 };
 
-export async function getServerSideProps(context: any) {
-	const { slug } = context.query;
+export async function getStaticPaths() {
+	const { results } = await postsList();
 
+	const paths = results.map((post) => ({
+		params: { slug: post.id },
+	}));
+
+	return { paths, fallback: false };
+}
+
+export async function getStaticProps({ params }: any) {
 	// Get the posts
-	const recordMap = await getPost(slug);
+	const recordMap = await getPost(params.slug);
 
 	// Return the result
 	return {

@@ -21,7 +21,7 @@ async function postsList() {
 	return myPosts;
 }
 
-async function getPost(pageId: any) {
+async function getPost(pageId: string) {
 	const notion = new NotionAPI();
 	const page = await notion.getPage(pageId);
 

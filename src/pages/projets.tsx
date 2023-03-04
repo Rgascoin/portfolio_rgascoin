@@ -215,7 +215,7 @@ const ContactPage: NextPage<Props> = (props: Props) => {
 	);
 };
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
 	// Get the posts
 	const { results } = await postsList();
 	// Return the result
