@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { postsList } from '../../lib/notion';
 import { NextPage } from 'next';
 import Head from 'next/head';
+import { InformationCircleIcon } from '@heroicons/react/outline';
 
 interface PostInterface {
 	id: string;
@@ -86,9 +87,24 @@ const ContactPage: NextPage<Props> = (props: Props) => {
 							Discover my projects.
 						</h2>
 						<p className="mt-3 max-w-2xl mx-auto text-xl text-gray-200 sm:mt-4">
-							From my experimentation with techniques and languages to my professional services.
+							Experimentation on techniques / languages and professional services.
 						</p>
 					</div>
+
+					<div className="rounded-md bg-gray-800 p-4 mx-0 md:mx-24 lg:mx-48 my-6">
+						<div className="flex">
+							<div className="flex-shrink-0">
+								<InformationCircleIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+							</div>
+							<div className="ml-3 flex-1 text-center">
+								<p className="text-sm text-gray-300">
+									Articles with <span>empty</span> reading time cannot be read
+								</p>
+								<p className="mt-3 text-sm md:mt-0 md:ml-6"></p>
+							</div>
+						</div>
+					</div>
+
 					<div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 						{props.posts &&
 							props.posts.map((result: PostInterface) => {
@@ -119,14 +135,27 @@ const ContactPage: NextPage<Props> = (props: Props) => {
 																		color
 																	}
 																>
-																	<Link href={`/projets/${result.id}`}>
+																	<Link
+																		href={
+																			result.properties.ReadTime?.rich_text[0]
+																				.plain_text !== 'empty'
+																				? `/projets/${result.id}`
+																				: '#'
+																		}
+																	>
 																		{el.name}
 																	</Link>
 																</p>
 															);
 														})}
 												</div>
-												<Link href={`/projets/${result.id}`}>
+												<Link
+													href={
+														result.properties.ReadTime?.rich_text[0].plain_text !== 'empty'
+															? `/projets/${result.id}`
+															: '#'
+													}
+												>
 													<a href={'#'} className="block mt-2">
 														<p className="text-xl font-semibold text-white">
 															{result.properties.Title?.title[0].plain_text}
@@ -150,9 +179,10 @@ const ContactPage: NextPage<Props> = (props: Props) => {
 													<p className="text-sm font-medium text-white">
 														<Link
 															href={
-																result.properties.AuthorLink
-																	? result.properties.AuthorLink.url
-																	: ''
+																result.properties.ReadTime?.rich_text[0].plain_text !==
+																'empty'
+																	? `/projets/${result.id}`
+																	: '#'
 															}
 														>
 															<a href={'#'} className="hover:underline">
@@ -184,7 +214,6 @@ const ContactPage: NextPage<Props> = (props: Props) => {
 };
 
 export async function getServerSideProps() {
-	console.log(process.env.NOTION_KEY);
 	// Get the posts
 	const { results } = await postsList();
 	// Return the result
