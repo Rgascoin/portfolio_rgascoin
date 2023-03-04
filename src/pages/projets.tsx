@@ -124,30 +124,32 @@ const ContactPage: NextPage<Props> = (props: Props) => {
 											<div className="flex-1">
 												<div className="flex space-x-1">
 													{result.properties.Tags &&
-														result.properties.Tags.multi_select.map((el: any) => {
-															let color = pickTagColor(el.name);
-															if (!color) color = 'bg-gray-800';
-															return (
-																<p
-																	key={el.name}
-																	className={
-																		`text-xs rounded-xl font-medium text-white p-1 px-2 ` +
-																		color
-																	}
-																>
-																	<Link
-																		href={
-																			result.properties.ReadTime?.rich_text[0]
-																				.plain_text !== 'empty'
-																				? `/projets/${result.id}`
-																				: '#'
+														result.properties.Tags.multi_select.map(
+															(el: { name: string }) => {
+																let color = pickTagColor(el.name);
+																if (!color) color = 'bg-gray-800';
+																return (
+																	<p
+																		key={el.name}
+																		className={
+																			`text-xs rounded-xl font-medium text-white p-1 px-2 ` +
+																			color
 																		}
 																	>
-																		{el.name}
-																	</Link>
-																</p>
-															);
-														})}
+																		<Link
+																			href={
+																				result.properties.ReadTime?.rich_text[0]
+																					.plain_text !== 'empty'
+																					? `/projets/${result.id}`
+																					: '#'
+																			}
+																		>
+																			{el.name}
+																		</Link>
+																	</p>
+																);
+															},
+														)}
 												</div>
 												<Link
 													href={
