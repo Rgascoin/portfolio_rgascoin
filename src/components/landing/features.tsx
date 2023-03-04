@@ -1,4 +1,3 @@
-import { SparklesIcon } from '@heroicons/react/outline';
 import Link from 'next/link';
 
 export default function Features() {
@@ -17,12 +16,12 @@ export default function Features() {
 							</div>
 							<div className="mt-6">
 								<h2 className="text-3xl font-extrabold tracking-tight text-white">
-									Vos solutions NFT clés en main
+									Everything you need
 								</h2>
 								<p className="mt-4 text-lg text-gray-200">
-									Vous souhaitez réaliser un projet NFT ? Que ce soit pour de l&apos;audit ou réalisé
-									votre demande n&apos;hésitez plus et prenez contact pour discuter de votre projet
-									maintenant
+									Are you looking to execute a blockchain project? Whether it is for an audit of smart
+									contracts or web3 development, do not hesitate any longer and contact us to discuss
+									your project now.
 								</p>
 								<div className="mt-6">
 									<Link href={'/contact'}>
@@ -30,7 +29,7 @@ export default function Features() {
 											href="#"
 											className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
 										>
-											Prendre contact
+											Get in touch
 										</a>
 									</Link>
 								</div>
@@ -40,8 +39,8 @@ export default function Features() {
 							<blockquote>
 								<div>
 									<p className="text-base text-gray-300">
-										&ldquo;Travailler avec Roman est un plaisir. Toujours courtois et professionnel,
-										il nous tient régulièrement au courant de ses avancés sur notre projet.&rdquo;
+										&ldquo;Working with Roman is a pleasure. Always courteous and professional, he
+										regularly keeps us updated on the progress of our project.&rdquo;
 									</p>
 								</div>
 								<footer className="mt-3">
@@ -85,11 +84,11 @@ export default function Features() {
 							</div>
 							<div className="mt-6">
 								<h2 className="text-3xl font-extrabold tracking-tight text-white">
-									Des front-end réalisés sur mesure
+									Custom-made front-end development.
 								</h2>
 								<p className="mt-4 text-lg text-gray-200">
-									Envie de mettre en avant votre business ? Je peux vous proposer des solutions
-									techniques et pratique selon vos besoins.
+									Want to showcase your business? I can offer you technical and practical solutions
+									tailored to your needs.
 								</p>
 								<div className="mt-6">
 									<Link href={'/contact'}>
@@ -97,7 +96,7 @@ export default function Features() {
 											href="#"
 											className="inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700"
 										>
-											Prendre contact
+											Get in touch
 										</a>
 									</Link>
 								</div>

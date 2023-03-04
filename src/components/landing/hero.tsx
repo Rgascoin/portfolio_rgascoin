@@ -1,9 +1,5 @@
 import Link from 'next/link';
 
-function classNames(...classes: any) {
-	return classes.filter(Boolean).join(' ');
-}
-
 export default function Hero() {
 	return (
 		<div className="bg-gray-900 mt-4">
@@ -25,11 +21,11 @@ export default function Hero() {
 								<div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
 									<h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
 										<span className="block text-white">Roman Gascoin</span>
-										<span className="block text-indigo-200">Solidity Freelancer</span>
+										<span className="block text-indigo-200">Blockchain Freelancer</span>
 									</h1>
 									<p className="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
-										Développement de solution sur blockchain compatible EVM ou réalisation de
-										front-end je serais ravi de vous aider.
+										Development of a blockchain solution compatible with EVM or front-end
+										implementation, I would be happy to help you.
 									</p>
 									<div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
 										<div className="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
@@ -38,7 +34,7 @@ export default function Hero() {
 													href="#"
 													className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8"
 												>
-													Me contacter
+													Contact me
 												</a>
 											</Link>
 											<Link href="/projets">
@@ -46,7 +42,7 @@ export default function Hero() {
 													href="#"
 													className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8"
 												>
-													Mes réalisations
+													My projects
 												</a>
 											</Link>
 										</div>
@@ -60,7 +56,7 @@ export default function Hero() {
 					<div className="bg-gray-800">
 						<div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
 							<p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
-								Mes technologies favorites du moment
+								My current favorite technologies.
 							</p>
 							<div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
 								<div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">

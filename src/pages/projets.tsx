@@ -3,21 +3,66 @@ import NavBar from '../components/layout/navBar';
 import Footer from '../components/layout/footer';
 
 import Link from 'next/link';
-import { getPost, postsList } from '../../lib/notion';
+import { postsList } from '../../lib/notion';
 import { NextPage } from 'next';
 import Head from 'next/head';
 
-interface Props {
-	posts: [any];
+interface PostInterface {
+	id: string;
+	properties: {
+		Thumbnail?: {
+			url: string;
+		};
+		Tags?: {
+			multi_select: {
+				name: string;
+			}[];
+		};
+		Title?: {
+			title: {
+				plain_text: string;
+			}[];
+		};
+		Description?: {
+			rich_text: {
+				plain_text: string;
+			}[];
+		};
+		AuthorPic?: {
+			url: string;
+		};
+		AuthorLink?: {
+			url: string;
+		};
+		Author?: {
+			rich_text: {
+				plain_text: string;
+			}[];
+		};
+		Date?: {
+			date: {
+				start: string;
+			};
+		};
+		ReadTime?: {
+			rich_text: {
+				plain_text: string;
+			}[];
+		};
+	};
 }
 
-const ContactPage: NextPage<Props> = (props: any) => {
+interface Props {
+	posts: [PostInterface];
+}
+
+const ContactPage: NextPage<Props> = (props: Props) => {
 	const pickTagColor = (type: string) => {
 		const mapping = {
 			Article: 'bg-indigo-600',
 			Freelance: 'bg-orange-500',
 			Association: 'bg-teal-500',
-			Decouverte: 'bg-blue-500',
+			Discover: 'bg-blue-500',
 			Tuto: 'bg-green-600',
 		};
 
@@ -38,15 +83,15 @@ const ContactPage: NextPage<Props> = (props: any) => {
 				<div className="relative max-w-7xl mx-auto">
 					<div className="text-center">
 						<h2 className="text-3xl tracking-tight font-extrabold text-white sm:text-4xl">
-							Découvrez mes projets
+							Discover my projects.
 						</h2>
 						<p className="mt-3 max-w-2xl mx-auto text-xl text-gray-200 sm:mt-4">
-							De mes essaies sur des techniques et languages à mes prestations professionnelles
+							From my experimentation with techniques and languages to my professional services.
 						</p>
 					</div>
 					<div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
 						{props.posts &&
-							props.posts.map((result: any, index: any) => {
+							props.posts.map((result: PostInterface) => {
 								return (
 									<div
 										key={result.id}
@@ -74,63 +119,54 @@ const ContactPage: NextPage<Props> = (props: any) => {
 																		color
 																	}
 																>
-																	<a href={`/projets/${result.id}`} className="">
+																	<Link href={`/projets/${result.id}`}>
 																		{el.name}
-																	</a>
+																	</Link>
 																</p>
 															);
 														})}
 												</div>
-												<a href={`/projets/${result.id}`} className="block mt-2">
-													<p className="text-xl font-semibold text-white">
-														{result.properties.Title &&
-															result.properties.Title.title[0].plain_text}
-													</p>
-													<p className="mt-3 text-base text-gray-200">
-														{result.properties.Description &&
-															result.properties.Description.rich_text[0].plain_text}
-													</p>
-												</a>
+												<Link href={`/projets/${result.id}`}>
+													<a href={'#'} className="block mt-2">
+														<p className="text-xl font-semibold text-white">
+															{result.properties.Title?.title[0].plain_text}
+														</p>
+														<p className="mt-3 text-base text-gray-200">
+															{result.properties.Description?.rich_text[0].plain_text}
+														</p>
+													</a>
+												</Link>
 											</div>
 											<div className="mt-6 flex items-center">
 												<div className="flex-shrink-0">
 													<span className="sr-only">img</span>
 													<img
 														className="h-10 w-10 rounded-full"
-														src={
-															result.properties.AuthorPic &&
-															result.properties.AuthorPic.url
-														}
+														src={result.properties.AuthorPic?.url}
 														alt="author"
 													/>
 												</div>
 												<div className="ml-3">
 													<p className="text-sm font-medium text-white">
-														<a
+														<Link
 															href={
-																result.properties.AuthorLink &&
-																result.properties.AuthorLink.url
+																result.properties.AuthorLink
+																	? result.properties.AuthorLink.url
+																	: ''
 															}
-															className="hover:underline"
 														>
-															{result.properties.Author &&
-																result.properties.Author.rich_text[0].plain_text}
-														</a>
+															<a href={'#'} className="hover:underline">
+																{result.properties.Author?.rich_text[0].plain_text}
+															</a>
+														</Link>
 													</p>
 													<div className="flex space-x-1 text-sm text-gray-200">
-														<time
-															dateTime={
-																result.properties.Date &&
-																result.properties.Date.date.start
-															}
-														>
-															{result.properties.Date &&
-																result.properties.Date.date.start}
+														<time dateTime={result.properties.Date?.date.start}>
+															{result.properties.Date?.date.start}
 														</time>
 														<span aria-hidden="true">&middot;</span>
 														<span>
-															{result.properties.ReadTime &&
-																result.properties.ReadTime.rich_text[0].plain_text}
+															{result.properties.ReadTime?.rich_text[0].plain_text}
 														</span>
 													</div>
 												</div>
@@ -148,6 +184,7 @@ const ContactPage: NextPage<Props> = (props: any) => {
 };
 
 export async function getServerSideProps() {
+	console.log(process.env.NOTION_KEY);
 	// Get the posts
 	const { results } = await postsList();
 	// Return the result

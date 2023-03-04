@@ -2,8 +2,9 @@
 const navigation = [
 	{
 		name: 'LinkedIn',
-		href: 'www.linkedin.com/in/rgascoin',
-		icon: (props: any) => (
+		href: 'https://www.linkedin.com/in/rgascoin',
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		icon: (props: JSX.Element) => (
 			<img
 				className="h-6 grayscale  hover:grayscale-0 transition delay-100"
 				src="https://cdn.svgporn.com/logos/linkedin-icon.svg"
@@ -14,7 +15,8 @@ const navigation = [
 	{
 		name: 'Malt',
 		href: 'https://www.malt.fr/profile/romangascoin',
-		icon: (props: any) => (
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		icon: (props: JSX.Element) => (
 			<img
 				className="h-6 grayscale  hover:grayscale-0 transition delay-100"
 				src="https://medias.carrieres-juridiques.com/image/employeurs/logos/5b50a49dbaedf.png"
@@ -25,7 +27,8 @@ const navigation = [
 	{
 		name: 'GitHub',
 		href: 'https://github.com/Rgascoin',
-		icon: (props: any) => (
+		// eslint-disable-next-line @typescript-eslint/no-unused-vars
+		icon: (props: JSX.Element) => (
 			<img
 				className="h-6 grayscale  hover:grayscale-0 invert transition delay-100"
 				src="https://cdn.svgporn.com/logos/github-icon.svg"
@@ -49,7 +52,7 @@ export default function Footer() {
 				</div>
 				<div className="mt-8 md:mt-0 md:order-1">
 					<p className="text-center text-base text-gray-400">
-						&copy; 2022 Rgascoin, Inc. tout droit réservé.
+						&copy; 2023 Rgascoin, Inc. All rights reserved.
 					</p>
 				</div>
 			</div>
