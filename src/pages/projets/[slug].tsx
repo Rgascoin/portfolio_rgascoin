@@ -62,6 +62,7 @@ export async function getStaticProps({ params }: any) {
 		props: {
 			page: recordMap,
 		},
+		revalidate: 86400,
 	};
 }
 
